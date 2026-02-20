@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>From Papal Fiat to Federal Precedent: The Ideological Lineage of the Doctrine of Discovery</title>
+    <meta name="description" content="Historical analysis tracing the Doctrine of Discovery from medieval papal bulls through the Teutonic Order to modern U.S. property law">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Lato:wght@300;400;700;900&family=Inconsolata:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --bg-parchment: #f5f1e8;
+            --bg-paper: #ffffff;
+            --bg-accent: #e8e3d6;
+            --text-primary: #2c1810;
+            --text-secondary: #5a483a;
+            --text-muted: #8b7968;
+            --accent-crimson: #8b1a1a;
+            --accent-gold: #b8860b;
+            --accent-royal: #1e3a5f;
+            --border-color: #d4c4a8;
+            --shadow: 0 2px 12px rgba(44, 24, 16, 0.1);
+        }
+        
+        body {
+            font-family: 'Lato', sans-serif;
+            background: var(--bg-parchment);
+            color: var(--text-primary);
+            line-height: 1.8;
+        }
+        
+        .container {
+            max-width: 950px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+        
+        /* Scholarly Header */
+        .header {
+            background: var(--bg-paper);
+            border: 1px solid var(--border-color);
+            padding: 3rem;
+            margin-bottom: 3rem;
+            box-shadow: var(--shadow);
+            position: relative;
+        }
+        
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: linear-gradient(90deg, var(--accent-crimson) 0%, var(--accent-gold) 50%, var(--accent-royal) 100%);
+        }
+        
+        h1 {
+            font-family: 'EB Garamond', serif;
+            font-size: 2.8rem;
+            font-weight: 700;
+            line-height: 1.3;
+            color: var(--accent-crimson);
+            margin-bottom: 1.5rem;
+        }
+        
+        .subtitle {
+            font-family: 'EB Garamond', serif;
+            font-size: 1.3rem;
+            font-style: italic;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+        }
+        
+        .abstract {
+            background: var(--bg-accent);
+            border-left: 4px solid var(--accent-gold);
+            padding: 1.5rem;
+            margin-top: 2rem;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+        
+        /* Section Styling */
+        section {
+            background: var(--bg-paper);
+            border: 1px solid var(--border-color);
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+        }
+        
+        h2 {
+            font-family: 'EB Garamond', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent-crimson);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: baseline;
+            gap: 1rem;
+        }
+        
+        .section-number {
+            font-family: 'Inconsolata', monospace;
+            font-size: 1.4rem;
+            color: var(--accent-gold);
+            font-weight: 700;
+        }
+        
+        h3 {
+            font-family: 'EB Garamond', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin: 2rem 0 1rem;
+        }
+        
+        p {
+            margin-bottom: 1.5rem;
+            color: var(--text-secondary);
+            text-align: justify;
+        }
+        
+        /* Emphasis Boxes */
+        .concept-box {
+            background: linear-gradient(135deg, rgba(184, 134, 11, 0.08) 0%, rgba(184, 134, 11, 0.02) 100%);
+            border: 2px solid var(--accent-gold);
+            border-radius: 4px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .concept-box h3 {
+            color: var(--accent-gold);
+            margin-top: 0;
+        }
+        
+        .critical-box {
+            background: linear-gradient(135deg, rgba(139, 26, 26, 0.08) 0%, rgba(139, 26, 26, 0.02) 100%);
+            border: 2px solid var(--accent-crimson);
+            border-radius: 4px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .critical-box h3 {
+            color: var(--accent-crimson);
+            margin-top: 0;
+        }
+        
+        .evidence-box {
+            background: var(--bg-accent);
+            border-left: 4px solid var(--accent-royal);
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        /* Tables */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            background: var(--bg-paper);
+            box-shadow: var(--shadow);
+        }
+        
+        .comparison-table th {
+            background: var(--accent-crimson);
+            color: white;
+            padding: 1rem;
+            text-align: left;
+            font-weight: 700;
+            font-size: 0.95rem;
+        }
+        
+        .comparison-table td {
+            padding: 1rem;
+            border-bottom: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            vertical-align: top;
+        }
+        
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .comparison-table strong {
+            color: var(--accent-crimson);
+            font-weight: 700;
+        }
+        
+        /* Lists */
+        ul, ol {
+            margin: 1.5rem 0 1.5rem 2.5rem;
+        }
+        
+        li {
+            margin-bottom: 1rem;
+            color: var(--text-secondary);
+        }
+        
+        ul li::marker {
+            color: var(--accent-gold);
+        }
+        
+        ol li::marker {
+            color: var(--accent-crimson);
+            font-weight: 700;
+        }
+        
+        strong {
+            color: var(--accent-crimson);
+            font-weight: 700;
+        }
+        
+        em {
+            color: var(--accent-gold);
+            font-style: italic;
+        }
+        
+        /* Legal Case Styling */
+        .case-citation {
+            font-family: 'EB Garamond', serif;
+            font-style: italic;
+            font-weight: 600;
+            color: var(--accent-royal);
+        }
+        
+        /* Quote Box */
+        .quote-box {
+            background: var(--bg-accent);
+            border-left: 4px solid var(--accent-crimson);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            font-family: 'EB Garamond', serif;
+            font-size: 1.1rem;
+            font-style: italic;
+            color: var(--text-primary);
+        }
+        
+        /* Historical Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 3rem;
+            margin: 2rem 0;
+            border-left: 3px solid var(--accent-gold);
+        }
+        
+        .timeline-item {
+            margin-bottom: 2rem;
+            position: relative;
+        }
+        
+        .timeline-item::before {
+            content: '◆';
+            position: absolute;
+            left: -3.3rem;
+            color: var(--accent-crimson);
+            font-size: 1.5rem;
+        }
+        
+        .timeline-date {
+            font-family: 'Inconsolata', monospace;
+            font-weight: 700;
+            color: var(--accent-crimson);
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Papal Bulls */
+        .papal-bull {
+            background: var(--bg-paper);
+            border: 2px solid var(--accent-gold);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            box-shadow: var(--shadow);
+        }
+        
+        .papal-bull-title {
+            font-family: 'EB Garamond', serif;
+            font-size: 1.3rem;
+            font-style: italic;
+            color: var(--accent-gold);
+            margin-bottom: 0.5rem;
+        }
+        
+        .papal-bull-date {
+            font-family: 'Inconsolata', monospace;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+        
+        /* Habsburg Example */
+        .historical-figure {
+            background: var(--bg-accent);
+            border-radius: 4px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .figure-name {
+            font-family: 'EB Garamond', serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--accent-royal);
+            margin-bottom: 1rem;
+        }
+        
+        .figure-detail {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 0.5rem 1rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .figure-label {
+            font-weight: 700;
+            color: var(--accent-crimson);
+        }
+        
+        /* Modern Continuity Box */
+        .continuity-box {
+            background: var(--accent-crimson);
+            color: white;
+            padding: 2.5rem;
+            margin: 3rem 0;
+            border-radius: 4px;
+            box-shadow: 0 8px 24px rgba(139, 26, 26, 0.3);
+        }
+        
+        .continuity-box h3 {
+            color: white;
+            margin-top: 0;
+            font-size: 1.8rem;
+        }
+        
+        .continuity-box p {
+            color: rgba(255,255,255,0.95);
+        }
+        
+        .continuity-box strong {
+            color: var(--accent-gold);
+        }
+        
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 3rem 0;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border-color);
+            margin-top: 4rem;
+            font-family: 'Inconsolata', monospace;
+            font-size: 0.85rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 2rem 1.5rem;
+            }
+            
+            .header {
+                padding: 2rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.6rem;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+            
+            section {
+                padding: 1.5rem;
+            }
+            
+            .comparison-table {
+                font-size: 0.85rem;
+            }
+            
+            .comparison-table th,
+            .comparison-table td {
+                padding: 0.75rem;
+            }
+            
+            .timeline {
+                padding-left: 2rem;
+            }
+            
+            .figure-detail {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>From Papal Fiat to Federal Precedent</h1>
+            <p class="subtitle">The Ideological Lineage of the Doctrine of Discovery</p>
+            
+            <div class="abstract">
+                <strong>Abstract:</strong> This analysis traces the juridical and theological foundations of the Doctrine of Discovery from its origins in 15th-century papal bulls through the militarized prototype of the Teutonic Order to its codification in modern U.S. property law. It demonstrates how medieval theological perversions of Christian doctrine were transmuted into secular legal precedent, creating an unbroken ideological lineage from Holy Roman imperial legitimacy to contemporary Indigenous dispossession.
+            </div>
+        </header>
+
+        <!-- Section 1: Genesis -->
+        <section id="section-1">
+            <h2><span class="section-number">1.</span> The Genesis of Institutional Legitimacy</h2>
+            <h3>The Holy Roman Empire and the Myth of Blood</h3>
+            
+            <p>The formation of the Holy Roman Empire (HRE) represented a sophisticated "branding exercise" in institutional legitimacy, strategically synthesizing religious authority with the prestige of Roman imperial heritage. This synthesis created a <strong>"360-degree circle" of power</strong>, effectively laundering military expansion through the guise of divine mandate.</p>
+            
+            <p>By positioning the Emperor as the "secular sword" of Christendom, the HRE established a closed loop of ideological justification that would eventually serve as the scaffolding for global European colonial expansion.</p>
+            
+            <div class="concept-box">
+                <h3>The Three-Part Structure of Imperial Legitimacy</h3>
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Component of HRE</th>
+                            <th>Strategic Objective</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Holy</strong></td>
+                            <td>To claim religious legitimacy directly from the Papacy, positioning the empire as the primary defender of the Catholic faith and the "secular sword" of God.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Roman</strong></td>
+                            <td>To claim <em>translatio imperii</em> (transfer of rule), establishing the empire as the direct and legitimate successor to the ancient Roman Empire and its universal prestige.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Empire</strong></td>
+                            <td>To assert universal authority over a multi-ethnic realm, placing the Emperor in a unique hierarchy above all other regional kings and princes.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <p>Central to this hierarchy was the concept of <strong>"Blue Blood"</strong> (<em>sangre azul</em>), a biological myth suggesting that the nobility possessed a superior, "unstained" ancestry. In a desperate attempt to preserve this perceived genetic purity, European dynasties—most notably the Habsburgs—practiced extreme endogamy.</p>
+            
+            <div class="critical-box">
+                <h3>The Biological Bankruptcy of "Royal Blood"</h3>
+                <p>This pursuit of "unstained" blood eventually devolved into an <strong>empirical bankruptcy of the system</strong>. The Spanish Habsburg King Charles II (inbreeding coefficient 0.254) serves as the ultimate evidence of this system's insanity:</p>
+                <ul>
+                    <li>Heart the size of a peppercorn</li>
+                    <li>Lungs corroded</li>
+                    <li>Intestines rotten and gangrenous</li>
+                </ul>
+                <p>This biological degradation stood in stark contrast to the sophisticated institutional tools created to export their power: the military-religious orders.</p>
+            </div>
+        </section>
+
+        <!-- Section 2: Teutonic Prototype -->
+        <section id="section-2">
+            <h2><span class="section-number">2.</span> The Teutonic Prototype</h2>
+            <h3>Religious Warfare as a Colonial Blueprint</h3>
+            
+            <p>The Teutonic Order served as the essential <strong>"theocratic template"</strong> for global colonization. Operating as a sovereign military entity, their 13th-century Baltic crusades pioneered the cycle of religious justification followed by land appropriation.</p>
+            
+            <p>By framing the conquest of pagan lands as a "holy mission," the Order established the <strong>"Christianize or Dispossess"</strong> model, where indigenous peoples were forced to convert, submit, or face systematic destruction, while their territories were seized as the property of the Order.</p>
+            
+            <div class="historical-figure">
+                <div class="figure-name">Charles of Austria ("The Posthumous")</div>
+                <p>The career of Charles of Austria illustrates the peak of this Habsburg-Teutonic connection during the 17th-century consolidation of power:</p>
+                
+                <div class="figure-detail">
+                    <span class="figure-label">Who:</span>
+                    <span>Charles of Austria, a Habsburg archduke and Prince-Bishop of Breslau and Brixen</span>
+                </div>
+                
+                <div class="figure-detail">
+                    <span class="figure-label">What:</span>
+                    <span>Grand Master (<em>Hochmeister</em>) of the Teutonic Order, combining supreme religious authority with territorial governance</span>
+                </div>
+                
+                <div class="figure-detail">
+                    <span class="figure-label">When:</span>
+                    <span>1618–1624, coinciding with outbreak of the Thirty Years' War</span>
+                </div>
+                
+                <div class="figure-detail">
+                    <span class="figure-label">Where:</span>
+                    <span>Primarily based in Neisse (Nysa), with scattered territories across the Holy Roman Empire</span>
+                </div>
+                
+                <div class="figure-detail">
+                    <span class="figure-label">Why:</span>
+                    <span>To consolidate Habsburg dynastic prestige and Catholic power through accumulation of ecclesiastical and military offices</span>
+                </div>
+                
+                <div class="figure-detail">
+                    <span class="figure-label">How:</span>
+                    <span>By leveraging "Habsburg blood" to secure plurality of offices, using the Order as political-ecclesiastical tool</span>
+                </div>
+            </div>
+            
+            <p>By the 17th century, the Teutonic Order had transformed from its original mandate into a political tool for the nobility—a <strong>"360-degree circle"</strong> where military force was laundered through ceremonial nobility and religious titles.</p>
+            
+            <p>This military-religious prototype provided the practical methods of conquest that would eventually be codified into the formal legal decrees of the 15th-century Papal Bulls.</p>
+        </section>
+
+        <!-- Section 3: Papal Bulls -->
+        <section id="section-3">
+            <h2><span class="section-number">3.</span> Codifying Dispossession</h2>
+            <h3>The Papal Bulls of the 15th Century</h3>
+            
+            <p>The Papacy acted as the primary architect of sanctioned violence, providing the <strong>legal engine for global dispossession</strong> through "Apostolic Authority."</p>
+            
+            <div class="critical-box">
+                <h3>The Profound Irony</h3>
+                <p>There exists a profound, psychotic irony in the very name of the "Roman" Catholic Church: <strong>it adopted the structure, name, and imperial methods of the very empire that executed its founder.</strong> This institution, having absorbed the machinery of its founder's executioners, proceeded to issue the legal instruments of global subjugation.</p>
+            </div>
+            
+            <h3>Three Foundational Papal Bulls</h3>
+            
+            <div class="papal-bull">
+                <div class="papal-bull-title">Dum Diversas</div>
+                <div class="papal-bull-date">1452</div>
+                <p>Granted "full and free permission" to invade, search out, and subjugate non-Christians, explicitly authorizing their reduction to <strong>"perpetual slavery"</strong> and the total seizure of their property.</p>
+            </div>
+            
+            <div class="papal-bull">
+                <div class="papal-bull-title">Romanus Pontifex</div>
+                <div class="papal-bull-date">1455</div>
+                <p>Extended these rights to the African continent, specifically blessing the seizure of "Guineamen and other negroes" through the African slave trade.</p>
+            </div>
+            
+            <div class="papal-bull">
+                <div class="papal-bull-title">Inter Caetera</div>
+                <div class="papal-bull-date">1493</div>
+                <p>Divided the "New World" between Spain and Portugal, granting title to lands "discovered" by Christian monarchs and mandating a <strong>"convert or die"</strong> policy for inhabitants.</p>
+            </div>
+            
+            <p>This era marked a total <strong>"Theological Inversion,"</strong> where the institutional Church operated as a predator in direct opposition to the teachings of Jesus.</p>
+            
+            <h3>The Hypocrisy of the Vicar of Christ</h3>
+            
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Actual Teachings of Jesus</th>
+                        <th>Institutional Actions of the Church</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Peace:</strong> "Blessed are the peacemakers."</td>
+                        <td><strong>War:</strong> 1,000 years of Crusades, military orders, and Inquisitions.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Poverty:</strong> "Sell your possessions and give to the poor."</td>
+                        <td><strong>Wealth:</strong> Accumulation of massive wealth, palaces, and global land holdings.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Service:</strong> "The greatest among you will be your servant."</td>
+                        <td><strong>Power:</strong> Claiming temporal political power and authority over all kings.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Forgiveness:</strong> "Love your enemies."</td>
+                        <td><strong>Dispossession:</strong> Authorizing "perpetual slavery" and systematic genocide.</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <p>These religious decrees formed the <strong>"Doctrine of Discovery,"</strong> a logic that would eventually be secularized and absorbed into the foundational legal framework of the United States.</p>
+        </section>
+
+        <!-- Section 4: American Paradox -->
+        <section id="section-4">
+            <h2><span class="section-number">4.</span> The American Paradox</h2>
+            <h3>Genealogy, "Insanity," and the GIGO Framework</h3>
+            
+            <p>The founding of the United States can be viewed through a <strong>"Garbage In, Garbage Out" (GIGO)</strong> framework. The architects of the American republic sought to reject the authority of the "Church and Crown," yet they were the literal biological and cultural descendants of that very system.</p>
+            
+            <div class="evidence-box">
+                <p><strong>In an act of ultimate irony:</strong> Figures like George Washington, Thomas Jefferson, and John Adams were direct descendants of the Plantagenet kings (Edward I and Edward III) and Charlemagne. <strong>They were, in effect, attempting to reject their own ancestors.</strong></p>
+            </div>
+            
+            <p>The American rejection of monarchy was empirically driven. Observing the "madness" of European royalty—from the biological collapse of the Habsburgs to the mental instability of George III (suffering from porphyria)—the Founders recognized that "royal blood" was a biological bankruptcy.</p>
+            
+            <p>However, this diagnosis did not prevent a manifest <strong>"Institutional Psychosis"</strong> or a dissociative break from moral reality within the new republic.</p>
+            
+            <div class="critical-box">
+                <h3>The American Insanities</h3>
+                <ol>
+                    <li>
+                        <strong>Racial Slavery:</strong> Proclaiming "All men are created equal" while maintaining human bondage. This dissociative thinking reached its peak in Thomas Jefferson, who enslaved his own children with Sally Hemings.
+                    </li>
+                    <li>
+                        <strong>Genocidal Military Campaigns:</strong> Executing systematic warfare against Indigenous nations to facilitate land theft, earning George Washington the Haudenosaunee title <strong>"Town Destroyer."</strong>
+                    </li>
+                    <li>
+                        <strong>Systematic Theft of Continents:</strong> Utilizing the "Doctrine of Discovery"—the very tool of the Papacy—to justify the mass dispossession of Indigenous peoples.
+                    </li>
+                </ol>
+            </div>
+            
+            <p>This paradox ensured that the medieval theological perversion of discovery was not discarded but was <strong>formally absorbed into the permanent record of the U.S. Supreme Court.</strong></p>
+        </section>
+
+        <!-- Section 5: Legal Transmutation -->
+        <section id="section-5">
+            <h2><span class="section-number">5.</span> Legal Transmutation</h2>
+            <h3><span class="case-citation">Johnson v. M'Intosh</span> (1823) and Modern Continuity</h3>
+            
+            <p>In the landmark case <span class="case-citation">Johnson v. M'Intosh</span> (1823), Chief Justice John Marshall performed a <strong>"legal transmutation,"</strong> turning 15th-century theological decrees into established U.S. property law.</p>
+            
+            <div class="quote-box">
+                "Discovery gave title to the government"
+                <div style="text-align: right; margin-top: 1rem; font-size: 0.95rem; color: var(--text-muted); font-style: normal;">— Chief Justice John Marshall, <span class="case-citation">Johnson v. M'Intosh</span></div>
+            </div>
+            
+            <p>Marshall's reasoning relied explicitly on the medieval Doctrine of Discovery to deny Indigenous sovereignty. He argued that the rights of Indigenous peoples were "impaired" by the superior rights of the discovering Christian nation.</p>
+            
+            <h3>The Unbroken Cycle of Legal Psychosis</h3>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">1452-1493</div>
+                    <p>Papal Bulls establish Doctrine of Discovery as theological justification for dispossession</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">1823</div>
+                    <p><span class="case-citation">Johnson v. M'Intosh</span> - Marshall codifies Doctrine into U.S. property law</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">2005</div>
+                    <p><span class="case-citation">City of Sherrill v. Oneida</span> - Supreme Court cites these principles to deny land sovereignty</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">Present</div>
+                    <p>Doctrine remains foundational bedrock of U.S. property law and Indigenous land claims</p>
+                </div>
+            </div>
+            
+            <div class="continuity-box">
+                <h3>This "Incomplete Revolution" Has Left a Lasting Legacy:</h3>
+                <ul>
+                    <li>The Doctrine of Discovery remains the <strong>foundational bedrock of U.S. property law</strong></li>
+                    <li>Indigenous land claims are still denied based on <strong>15th-century logic regarding "heathen" occupancy</strong></li>
+                    <li>As recently as 2005, in <span class="case-citation" style="color: var(--accent-gold);">City of Sherrill v. Oneida</span>, the Supreme Court cited these very principles to deny land sovereignty</li>
+                    <li>The medieval logic of the Papacy remains <strong>legally active in modern American courtrooms</strong></li>
+                </ul>
+                
+                <p style="margin-top: 2rem; font-size: 1.2rem; font-weight: 700; border-top: 1px solid rgba(255,255,255,0.3); padding-top: 1.5rem;">
+                    The "360-degree circle of insanity" remains tethered to its corrupted origins. From Charlemagne's coronation to the modern American courtroom, the legal foundation of the nation remains a rebranding of the very institutionalized violence and theological perversion it once claimed to abolish.
+                </p>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p><strong>From Papal Fiat to Federal Precedent</strong></p>
+            <p>The Ideological Lineage of the Doctrine of Discovery</p>
+            <p style="margin-top: 1rem; opacity: 0.7;">Historical Analysis of Legal Continuity from Medieval Canon Law to Modern Property Rights</p>
+        </footer>
+    </div>
+</body>
+</html>
